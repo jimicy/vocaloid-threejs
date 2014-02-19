@@ -75,8 +75,20 @@ loader.load( 'miku.js', function( geometry, materials ) {
   var delta = clock.getDelta();
   THREE.AnimationHandler.update( delta );
   renderer.render( scene, camera );
+
+  var song = document.getElementsByTagName('audio')[0];
+
+    var delay=2000;
+    setTimeout(function(){
+        song.play();
+    //your code to be executed after 1 seconds
+    },delay)
+
 } )();
+
 </script>
+
+<audio src="hhands.mp3" preload="auto" loop></audio>
 
 </body>
 </html>
